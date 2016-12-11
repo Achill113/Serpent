@@ -1,0 +1,21 @@
+// Place all the styles related to the doctors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	text-align: center;
+	border:1px solid black;
+	border-radius:2em;
+	margin:1em 20em;
+}
+
+.table {
+	text-align: center;
+}
+
+th {
+	margin-right: 1em;
+}
+
+td {
+	margin-right: 2em;
+}

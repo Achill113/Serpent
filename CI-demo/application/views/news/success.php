@@ -1,0 +1,1 @@
+<p>Your news post was successful</p>

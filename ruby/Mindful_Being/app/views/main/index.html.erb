@@ -1,0 +1,17 @@
+<div class="body">
+	<p>Welcome to Mindful Being, Where Consciousness Blossoms</p>
+	
+	<div class="article">
+		<h1>Listing articles</h1>
+		<% @articles.each do |article| %>
+		<%= link_to(main_path(article)) do %>
+		<div class="article_box">
+			<h2><%= article.title %></h2>
+		
+		    <p class="text"><%= article.description %></p>
+		</div>
+		<% end %>
+		<% end %>
+		<button><%= link_to 'New Article', new_main_path %></button>
+	</div>
+</div>

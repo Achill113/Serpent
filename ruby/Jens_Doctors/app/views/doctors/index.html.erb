@@ -1,0 +1,30 @@
+<div class="body">
+<h1>Doctors</h1>
+
+<div class="table">
+<center>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Location</th>
+		<th colspan=3></th>
+	</tr>
+	
+	<% @doctor.each do |doctor| %>
+	<tr>
+		<td><%= doctor.name %></td>
+		<td><%= doctor.description %></td>
+		<td><%= doctor.location %></td>
+		<td><%= link_to 'Show', doctor_path(doctor) %></td>
+		<td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+		<td><%= link_to 'Destroy', doctor_path(doctor),
+			method: :delete,
+			data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+</table>
+</center>
+</div>
+<%= link_to 'New Doctor', new_doctor_path %>
+</div>

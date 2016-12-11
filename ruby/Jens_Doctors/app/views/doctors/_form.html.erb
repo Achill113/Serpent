@@ -1,0 +1,38 @@
+<div style="text-align:center;">
+<%= form_for @doctor do |f| %>
+ 
+  <% if @doctor.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@doctor.errors.count, "error") %> prohibited
+        this doctor from being saved:
+      </h2>
+      <ul>
+        <% @doctor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+<p>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %>
+</p>
+
+<p>
+	<%= f.label :description %><br>
+	<%= f.text_area :description %>
+</p>
+
+<p>
+	<%= f.label :location %><br>
+	<%= f.text_area :location %>
+</p>
+
+<p>
+	<%= f.submit %>
+</p>
+
+<% end %>
+</div>

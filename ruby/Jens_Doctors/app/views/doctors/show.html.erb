@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+<h1>
+	<strong>Name:</strong>
+	<%= @doctor.name %>
+</h1>
+
+<p>
+	<strong>Description:</strong>
+	<%= @doctor.description %>
+</p>
+
+<p>
+	<strong>Location:</strong>
+	<%= @doctor.location %>
+</p>
+
+<%= link_to 'Edit', edit_doctor_path %>
+<%= link_to 'Back', doctors_path %>
+</div>
